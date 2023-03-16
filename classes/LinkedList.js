@@ -90,6 +90,7 @@ class LinkedList {
   }
 }
 
+// TODO: Extend the linked list class so this only contains the Double functionality
 class DoublyLinkedList {
   constructor(value) {
     this.head = {
