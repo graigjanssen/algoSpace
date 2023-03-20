@@ -50,3 +50,26 @@ class Stack {
     return this.length === 0;
   }
 }
+
+class ArrayStack {
+  constructor() {
+    this.array = [];
+    this.length = this.array.length;
+  }
+
+  peek() {
+    return this.array[this.length - 1];
+  }
+
+  push(value) {
+    this.array.push(value);
+  }
+
+  pop() {
+    this.array.pop();
+  }
+
+  isEmpty() {
+    return this.length === 0;
+  }
+}
