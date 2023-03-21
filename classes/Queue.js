@@ -42,3 +42,35 @@ class Queue {
     return first;
   }
 }
+
+class StackBasedQueue {
+  constructor() {
+    this.stack = [];
+    this.queue = [];
+  }
+
+  peek() {
+    if (this.stack.length > 0) {
+      return this.stack[0];
+    }
+    return this.queue[this.queue.length - 1];
+  }
+
+  enqueue(value) {
+    const length = this.queue.length;
+    for (let i = 0; i < length; i++) {
+      this.stack.push(this.queue.pop());
+    }
+    this.stack.push(value);
+    return this;
+  }
+
+  dequeue() {
+    const length = this.stack.length;
+    for (let i = 0; i < length; i++) {
+      this.queue.push(this.stack.pop());
+    }
+    this.queue.pop();
+    return this;
+  }
+}
