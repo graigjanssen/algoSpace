@@ -48,3 +48,7 @@ A branching, "vertical" data structure with the DOM as a chief example.
 A tree where a node can have zero, one or two child nodes. Every child node has only one parent.
 
 ***Perfect***: Every parent node has two children. This leads to certain conditions that can help with writing algorithms that deal with this structure.  Each level of the tree will have double the nodes of the level above. And the bottom level will have the total number of nodes above plus one. For example, a three level perfect binary tree will have four nodes on the bottom, with two above that and one above that - 4 = (2 + 1) + 1.
+
+### BST
+
+Binary Search Tree is a subset of Binary Trees that specifies how the values of nodes are organized. I guess it only applies to numbers, although I suppose it could be done with strings compared with alphabetical order. The rule is that the greater of a node's children goes to the right and the other on the left. This allows for more efficient lookup, since we can check if the number we're looking for is greater or less than the parent node and proceed accordingly.  
