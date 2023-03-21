@@ -39,3 +39,12 @@ A chain of objects, each with a `value` and a `next` property where the final no
 
 Stacks are a pile of plates, Queues are people in line. Both are narrowly applicable but when they're the right tool for the job, they're great. An array doesn't make for a great Queue implementation because dequeueing requires unshifting, which is O(n).
 
+## Trees
+
+A branching, "vertical" data structure with the DOM as a chief example.
+
+### Binary
+
+A tree where a node can have zero, one or two child nodes. Every child node has only one parent.
+
+***Perfect***: Every parent node has two children. This leads to certain conditions that can help with writing algorithms that deal with this structure.  Each level of the tree will have double the nodes of the level above. And the bottom level will have the total number of nodes above plus one. For example, a three level perfect binary tree will have four nodes on the bottom, with two above that and one above that - 4 = (2 + 1) + 1.
