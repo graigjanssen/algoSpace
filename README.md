@@ -51,4 +51,6 @@ A tree where a node can have zero, one or two child nodes. Every child node has 
 
 ### BST
 
-Binary Search Tree is a subset of Binary Trees that specifies how the values of nodes are organized. I guess it only applies to numbers, although I suppose it could be done with strings compared with alphabetical order. The rule is that the greater of a node's children goes to the right and the other on the left. This allows for more efficient lookup, since we can check if the number we're looking for is greater or less than the parent node and proceed accordingly.  
+Binary Search Tree is a subset of Binary Trees that specifies how the values of nodes are organized. I guess it only applies to numbers, although I suppose it could be done with strings compared with alphabetical order. The rule is that the greater of a node's children goes to the right and the other on the left. This allows for more efficient lookup, since we can check if the number we're looking for is greater or less than the parent node and proceed accordingly. 
+
+While the BST is never the fastest data structure, as it doesn't allow any operations at O(1) efficiency, it also isn't the slowest and offers consistent O(log n) efficiency for the standard set of operations, which beats O(n). Notable caveat is the tree needs to be balanced, meaning an equal number of nodes on each side of the initial parent, otherwise efficiency drops to linear.
