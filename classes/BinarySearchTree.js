@@ -56,7 +56,11 @@ class BinarySearchTree {
     }
     return null;
   }
-
+  // Iterative solution summary
+  // Once node is found, there are 3 main scenarios:
+  // 1. No children (leaf)
+  // 2. One child (easy delete by promoting only child)
+  // 3. Two children (needs another while loop to promote smallest node from right subtree)
   remove(value) {
     // Empty tree
     if (!this.root) {
@@ -94,7 +98,7 @@ class BinarySearchTree {
       } else {
         parent.right = null;
       }
-    // One null child  
+    // One child  
     } else if (current.left === null || current.right === null) {
       const newNode = current.left || current.right;
       // Root node
@@ -105,9 +109,32 @@ class BinarySearchTree {
       } else {
         parent.right = newNode;
       }
-    // Two children  
+    // Two children
+    // Can either find and "promote" the smallest node on the right or largest on the left
+    // ChatGPT said it's slightly preferable to go to the right because it tends to produce more balanced trees, so...  
     } else {
+      let smallestParent = current;
+      let smallest = current.right;
 
+      // Find smallest node in right subtree by going left until you can't no more
+      while (smallest.left !== null) {
+        smallestParent = smallest;
+        smallest = smallest.left;
+      }
+
+      // Replace current value with smallest value, so no nodes moving around, tree structure not touched
+      current.value = smallest.value;
+
+      // Delete that smallest leaf node
+      // We know there is no smallest.left since the while loop completed
+      // smallest.right will either be a node or null, doesn't matter
+      if (smallest = smallestParent.left) {
+        smallestParent.left = smallest.right;
+      } else {
+        smallestParent.right = smallest.right;
+      }
     }
+
+    return this.root;
   }
 }
