@@ -66,3 +66,11 @@ A Trie is another variation of a binary heap, although this one is no longer bin
 A graph is a non-linear data structure commonly used to represent real world relationships and networks like social media, maps and the internet and coomputer networks themselves. It consists of nodes (also called verticies) and edges (also called arcs or lines). There are many sub-varieties of graphs broken out by certain characteristics.  A directed graph (digraph), edges are unidirectional, meaning there is a one way relationship between two nodes. As a shorthand for this, think of Twitter followers, where if you follow someone, it doesn't mean they follow you back.  Undirected graphs have bidirectinal relationships. This is more akin to Facebook, where users are friends with each other. If A is friends with B, B is obviously friends with A.  
 
 Graphs can be cyclic or acyclic. Cyclic means that it's possible to travel from a starting node and arrive back at the starting node. So a circle can be made. Acyclical means this is not possible.  Another common variant is the weighted graph, where the edges or connecting lines have a weight or cost associated with it.
+
+There are several ways of implementing a graph data structure that can be done with arrays or objects.
+
+- Edge List: An array of arrays or an object with arrays as values. Each subarray contains two values representing every connection in the graph. `[[0, 1], [0, 2], [1,2]]` is just listing all the connections in the graph.
+
+- Adjacency list: In this version, the index of the array represents the node, with each subarray listing the nodes connected to it. `[[2], [2, 3], [0, 1], [1]]`: Node 0 is connected to Node 2, Node 1 is connected to Nodes 2 and 3, and so on.
+
+- Adjacency Matrix: Similar to the adjacency list, this one can use 0 or 1 as a boolean showing a given node's connection with every other node. Or in the case of a weighted graph, it can show the weight value or 0 if not connected.
