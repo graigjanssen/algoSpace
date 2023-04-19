@@ -82,4 +82,7 @@ There are several ways of implementing a graph data structure that can be done w
 In most cases, it's more about choosing the best sorting algorithm for the job rather than coding one from scratch, since many people smarter than us have spent years perfecting them.  While there are many more than these, five common varieties to know are Bubble, Insertion, Selection, Merge and Quick.  Those can be grouped into two buckets, simple and complex:
 
 - *Simple*: Bubble, Insertion, Selection
+  - Bubble: Very simple, brute force type of process. Keep looping through the data, comparing two adjacent elements and swapping them if element 1 is smaller than element 2 until the data is sorted. The largest value "bubbles" up to the top. Algorithm uses 2 nested for loops, so worst case time complexity is O(n^2). Space complexity is good at O(1).
+  - Selection: Similar to Bubble in time/space complexity, using nested for loops. As the outer loop moves along, the inner looks for the smallest element and moves it to the index that the outer loop is looking at.
+  - Insertion: Most potentially useful of these three, as it can be one of the fastest for small and/or nearly sorted datasets. See the code for this one in `exercises/insertionSort.js`. Nested loops are involved but done more efficiently. Main loop compares elements with first. If smaller, move it there. Otherwise, loop through elements 1 through the main loop index, then use splice to move the current index where it belongs.
 - *Complex*: Merge, Quick
