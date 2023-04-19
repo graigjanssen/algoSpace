@@ -74,3 +74,12 @@ There are several ways of implementing a graph data structure that can be done w
 - Adjacency list: In this version, the index of the array represents the node, with each subarray listing the nodes connected to it. `[[2], [2, 3], [0, 1], [1]]`: Node 0 is connected to Node 2, Node 1 is connected to Nodes 2 and 3, and so on.
 
 - Adjacency Matrix: Similar to the adjacency list, this one can use 0 or 1 as a boolean showing a given node's connection with every other node. Or in the case of a weighted graph, it can show the weight value or 0 if not connected.
+
+## Algorithms
+
+### Sort
+
+In most cases, it's more about choosing the best sorting algorithm for the job rather than coding one from scratch, since many people smarter than us have spent years perfecting them.  While there are many more than these, five common varieties to know are Bubble, Insertion, Selection, Merge and Quick.  Those can be grouped into two buckets, simple and complex:
+
+- *Simple*: Bubble, Insertion, Selection
+- *Complex*: Merge, Quick
